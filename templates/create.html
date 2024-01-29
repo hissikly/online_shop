@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Размещение товара
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+    <h1>Размещение товара на платформу</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="text" class="form-control" placeholder="Название товара" name="title" id="title"><br>
+        <input type="number" class="form-control" placeholder="Цена" name="price" id="price"><br>
+        <input type=file class="form-control" name="photo" id="photo" multiple accept="image/*,image/jpeg" alt="Загрузить фото"><br>
+        <textarea name="text" id="text" class="form-control" placeholder="Описание"></textarea><br>
+        <button class="btn btn-success" type="submit">Добавить товар</button>
+    </form>
+</div>
+
+{% endblock %}
